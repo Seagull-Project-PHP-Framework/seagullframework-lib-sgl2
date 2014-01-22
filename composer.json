@@ -1,0 +1,31 @@
+{
+    "description" : "Seagull2 Framework libs",
+    "name" : "seagullframework/lib-sgl2",
+    "keywords" : [
+        "framework",
+        "php"
+    ],
+    "homepage" : "http://seagullproject.org/",
+    "license" : "MIT",
+    "authors" : [
+        {
+            "name" : "Demian Turner",
+            "email" : "demian@phpkitchen.com"
+        },
+        {
+            "name" : "Seagull Community",
+            "homepage" : "http://trac.seagullproject.org/wiki/Community"
+        }
+    ],
+    "autoload": {
+        "psr-0": { "": "src/" }
+    },  
+    "require" : {
+        "php" : ">=5.2.1"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        }
+    }
+}

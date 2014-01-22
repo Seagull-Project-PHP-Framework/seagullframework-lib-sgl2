@@ -1,6 +1,6 @@
 <?php
 
-namespace MyProject;
+namespace SGL2;
 
 class Installer
 {

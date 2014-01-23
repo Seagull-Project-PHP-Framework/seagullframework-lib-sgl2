@@ -14,6 +14,7 @@ class Installer
 
     public static function postInstall() {
 
+        error_reporting(E_ALL ^ E_DEPRECATED);
 //        error_log("test message", 3, "/tmp/DEMIANS_LOG.txt");
 
         // run any post install tasks here

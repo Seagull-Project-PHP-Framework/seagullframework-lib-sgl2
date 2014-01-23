@@ -14,10 +14,10 @@ class Installer
 
     public static function postInstall() {
 
-        error_log("test message", 3, "/tmp/DEMIANS_LOG.txt");
+//        error_log("test message", 3, "/tmp/DEMIANS_LOG.txt");
 
         // run any post install tasks here
-        file_put_contents("/tmp/FOO2", "test");
+//        file_put_contents("/tmp/FOO2", "test");
         $b = new Bootstrap();
         $b->init();
 

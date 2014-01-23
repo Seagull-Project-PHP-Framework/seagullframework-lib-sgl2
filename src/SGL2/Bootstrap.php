@@ -37,17 +37,3 @@ class Bootstrap extends \SGL_FrontController
         $process->process($input, $output);
     }
 }
-
-
-class SGL_Task_MinimalSession extends SGL_DecorateProcess
-{
-    function process($input, $output)
-    {
-        session_start();
-        $_SESSION['uid'] = 1;
-        $_SESSION['rid'] = 1;
-        $_SESSION['aPrefs'] = array();
-
-        $this->processRequest->process($input, $output);
-    }
-}

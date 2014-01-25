@@ -6,27 +6,25 @@ use SGL2\Bootstrap;
 
 class Installer
 {
-
-    // load sgl environment
-    // determine root path
-    // symlink
-    //      - each of 4 modules
-
-    public static function postInstall() {
-
-        error_reporting(E_ALL ^ E_DEPRECATED);
-//        error_log("test message", 3, "/tmp/DEMIANS_LOG.txt");
-
+    public static function postInstall()
+    {
         // run any post install tasks here
-//        file_put_contents("/tmp/FOO2", "test");
         $b = new Bootstrap();
         $b->init();
 
+        $moduleDirComposer = SGL_PATH .'/vendor/seagullframework';
+        $aModuleList = array('block', 'default', 'navigation', 'user');
 
+        foreach ($aModuleList as $module) {
+            $modulePath = $moduleDirComposer . "/module-$module/src/$module";
+            // link modules in module dir
+            $ret = symlink($modulePath, SGL_MOD_DIR ."/$module");
+        }
     }
 
-    public static function preInstall() {
-        // run any post install tasks here
-        file_put_contents("/tmp/FOO1", "test");
+    public static function preInstall()
+    {
+        // run any pre install tasks here
+
     }
 }
